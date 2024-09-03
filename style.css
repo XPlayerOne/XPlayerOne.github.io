@@ -1,40 +1,180 @@
 body {
-    background-image: url(cena-de-horror-com-um-salao-assustador.jpg);
-    margin: 0;
-    padding: 0;
-    height: 100%;
-  }
-  
-  .titulo {
-    position: relative;
-    text-align: center;
-    font-family: sans-serif;
-    font-size: 30px;
-    border: #fff;
-    color: rgb(255, 255, 255);
-    text-shadow: 0 0 20px rgb(255, 255, 255);
-  }
-  
-  h2 {
-    font-size: 30px;
-  }
-  
-  li {
-    font-size: 18px;
-    line-height: 25px;
-    text-align: left;
-    padding-left: 0px;
-    list-style-type: square;
-  }
-  
+  background-image: url(cena-de-horror-com-um-salao-assustador.jpg);
+  background-size: cover; /* Asegura que el fondo cubra toda el área */
+  background-position: center; /* Centra el fondo */
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  transition: all 0.4s ease;
+  font-family: sans-serif;
+}
+
+.titulo {
+  position: relative;
+  text-align: center;
+  font-size: 30px;
+  color: #fff;
+  text-shadow: 0 0 20px #fff;
+  flex-direction: row-reverse;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+li {
+  font-size: 18px;
+  line-height: 25px;
+  text-align: left;
+  padding-left: 0;
+  list-style-type: square;
+  transition: 0.4s ease;
+  transition-property: font-size, line-height;
+}
+
+.pope-b:hover li,
+.dani-b:hover li,
+.steven-b:hover li,
+.dymon-b:hover li,
+.mondongo-b:hover li,
+.coquicat-b:hover li,
+.notam-b:hover li {
+  font-size: 25px;
+  line-height: 30px;
+}
+
+.tarjetas {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.pope-b,
+.dani-b,
+.steven-b,
+.dymon-b,
+.mondongo-b,
+.coquicat-b,
+.notam-b {
+  position: relative;
+  width: 300px;
+  height: 700px;
+  background: linear-gradient(transparent, rgba(255, 255, 255, 0.432));
+  border-top: 8px solid black;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 5px 5px 50px 2px #000;
+  text-align: center;
+  line-height: 1px;
+  color: #000;
+  margin: 8px 12px;
+  flex-shrink: 0;
+  transition: all 0.4s ease;
+}
+
+.pope-b {
+  background: linear-gradient(#d7d66566 70%, transparent);
+  color: #2d202a;
+}
+
+.dani-b {
+  background: linear-gradient(#ffffff66 70%, transparent);
+  color: #5a6874;
+}
+
+.steven-b {
+  background: linear-gradient(#000e 70%, transparent);
+  color: #a95bc0;
+}
+
+.dymon-b {
+  background: linear-gradient(#000e 70%, transparent);
+  color: #ff005e;
+}
+
+.mondongo-b {
+  background: linear-gradient(#767175 70%, transparent);
+  color: #00170d;
+}
+
+.coquicat-b {
+  background: linear-gradient(#2b2446 70%, transparent);
+  color: #e0beb5;
+}
+
+.notam-b {
+  background: linear-gradient(#5d6f89 70%, transparent);
+  color: #000001;
+}
+
+.pope-b::before,
+.dani-b::before,
+.steven-b::before,
+.dymon-b::before,
+.mondongo-b::before,
+.coquicat-b::before,
+.notam-b::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: inherit;
+  backdrop-filter: blur(6px);
+  z-index: -1;
+}
+
+.pope-b:hover,
+.dani-b:hover,
+.steven-b:hover,
+.dymon-b:hover,
+.mondongo-b:hover,
+.coquicat-b:hover,
+.notam-b:hover {
+  width: 500px;
+  box-shadow: 5px 5px 30px 20px #000;
+  outline: 5px solid whitesmoke;
+  margin: 0;
+}
+
+.pope-b:hover .pope,
+.dani-b:hover .dani,
+.steven-b:hover .steven,
+.dymon-b:hover .dymon,
+.mondongo-b:hover .mondongo,
+.coquicat-b:hover .coquicat,
+.notam-b:hover .notam {
+  width: 500px;
+  height: 500px;
+  transition: all 0.4s ease;
+}
+.dani-b:hover {
+  transition: color 1s ease;
+  transition: all 0.4s ease;
+  color: white;
+}
+
+.pope,
+.dani,
+.steven,
+.dymon,
+.mondongo,
+.coquicat,
+.notam {
+  transition: all 0.4s ease;
+  width: 300px;
+  height: 300px;
+}
+
+/* Para pantallas más pequeñas */
+@media only screen and (max-width: 724px) {
   .tarjetas {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin: auto;
-    padding: 90px;
+    flex-direction: column;
+    padding: 10px;
+    overflow: hidden;
   }
-  
+
   .pope-b,
   .dani-b,
   .steven-b,
@@ -42,99 +182,63 @@ body {
   .mondongo-b,
   .coquicat-b,
   .notam-b {
-    position: relative;
     width: 300px;
-    height: 700px;
-    background: linear-gradient(transparent, #000e);
-    border-top: 8px solid black;
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 5px 5px 50px 2px #000;
-    text-align: center;
-    line-height: 1px;
-    color: #fff;
-    font-family: sans-serif;
-    margin: 10px;
-    box-sizing: border-box;
-    flex-shrink: 0; /* Evita que la tarjeta se reduzca */
+    height: 500px;
+    margin: 10px auto;
   }
-  
-  
-  .pope-b::before,
-  .dani-b::before,
-  .steven-b::before,
-  .dymon-b::before,
-  .mondongo-b::before,
-  .coquicat-b::before,
-  .notam-b::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: inherit; /* Hereda el fondo del contenedor principal */
-    backdrop-filter: blur(15px);
-    z-index: -1; /* Asegura que esté detrás del contenido */
-  }
-  
-  .pope,
-  .dani,
-  .steven,
-  .dymon,
-  .mondongo,
-  .coquicat,
-  .notam {
+  .pope-b:hover,
+  .dani-b:hover,
+  .steven-b:hover,
+  .dymon-b:hover,
+  .mondongo-b:hover,
+  .coquicat-b:hover,
+  .notam-b:hover {
     width: 300px;
-    height: 300px;
-    border-radius: 3px;
+    height: 500px;
+    box-shadow: 5px 5px 30px 20px #000;
+    outline: 5px solid whitesmoke;
+    margin: 10px auto;
   }
-  
-  /* Para pantallas más pequeñas */
-  @media only screen and (max-width: 724px) {
-    .tarjetas {
-      flex-direction: column;
-      padding: 10px;
-    }
-  
-    .pope-b,
-    .dani-b,
-    .steven-b,
-    .dymon-b,
-    .mondongo-b,
-    .coquicat-b,
-    .notam-b {
-      width: 90%;
-      height: auto;
-      margin: 10px auto;
-    }
-  
-    h2 {
-      font-size: 24px;
-    }
-  
-    li {
-      font-size: 16px;
-      line-height: 22px;
-      padding-left: 15px;
-    }
-  
-    .titulo {
-      font-size: 20px;
-    }
+
+  .pope-b:hover .pope,
+  .dani-b:hover .dani,
+  .steven-b:hover .steven,
+  .dymon-b:hover .dymon,
+  .mondongo-b:hover .mondongo,
+  .coquicat-b:hover .coquicat,
+  .notam-b:hover .notam {
+  width: 300px;
+  height: 300px;
+  transition: all 0.4s ease;
+}
+.pope-b:hover li,
+.dani-b:hover li,
+.steven-b:hover li,
+.dymon-b:hover li,
+.mondongo-b:hover li,
+.coquicat-b:hover li,
+.notam-b:hover li {
+  font-size: 15px;
+  line-height: 30px;
+  text
+}
+
+  h2 {
+    font-size: 24px;
   }
-  
-  img {
-    max-width: 100%;
-    height: auto;
+
+  li {
+    font-size: 16px;
+    line-height: 22px;
+    padding-left: 15px;
   }
-  
-  body {
-    background-image: url(cena-de-horror-com-um-salao-assustador.jpg);
-    background-size: cover; /* Asegura que el fondo cubra toda el área */
-    background-position: center; /* Centra el fondo */
-    margin: 0;
-    padding: 0;
-    height: 100%;
+
+  .titulo {
+    font-size: 20px;
   }
-  
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
