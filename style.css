@@ -1,7 +1,7 @@
 body {
   background-image: url(cena-de-horror-com-um-salao-assustador.jpg);
-  background-size: cover; /* Asegura que el fondo cubra toda el área */
-  background-position: center; /* Centra el fondo */
+  background-size: cover; 
+  background-position: center;
   margin: 0;
   padding: 0;
   height: 100%;
@@ -10,12 +10,10 @@ body {
 }
 
 .titulo {
-  position: relative;
   text-align: center;
   font-size: 30px;
   color: #fff;
   text-shadow: 0 0 20px #fff;
-  flex-direction: row-reverse;
 }
 
 h2 {
@@ -39,14 +37,15 @@ li {
 .mondongo-b:hover li,
 .coquicat-b:hover li,
 .notam-b:hover li {
-  font-size: 25px;
-  line-height: 30px;
 }
 
 .tarjetas {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  position: absolute;
+  box-sizing: border-box;
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  margin:0;
 }
 
 .pope-b,
@@ -57,6 +56,7 @@ li {
 .coquicat-b,
 .notam-b {
   position: relative;
+  justify-content:space-around;
   width: 300px;
   height: 700px;
   background: linear-gradient(transparent, rgba(255, 255, 255, 0.432));
@@ -65,6 +65,7 @@ li {
   overflow: hidden;
   box-shadow: 5px 5px 50px 2px #000;
   text-align: center;
+  box-sizing: border-box;
   line-height: 1px;
   color: #000;
   margin: 8px 12px;
@@ -74,36 +75,43 @@ li {
 
 .pope-b {
   background: linear-gradient(#d7d66566 70%, transparent);
+  outline: 2px solid #2d202a;
   color: #2d202a;
 }
 
 .dani-b {
   background: linear-gradient(#ffffff66 70%, transparent);
-  color: #5a6874;
+  outline: 2px solid #2a333b;
+  color: #2a333b;
 }
 
 .steven-b {
   background: linear-gradient(#000e 70%, transparent);
+  outline: 2px solid #a95bc0;
   color: #a95bc0;
 }
 
 .dymon-b {
   background: linear-gradient(#000e 70%, transparent);
+  outline: 2px solid #ff005e;
   color: #ff005e;
 }
 
 .mondongo-b {
   background: linear-gradient(#767175 70%, transparent);
+  outline: 2px solid #00170d;
   color: #00170d;
 }
 
 .coquicat-b {
   background: linear-gradient(#2b2446 70%, transparent);
+  outline: 2px solid #e0beb5;
   color: #e0beb5;
 }
 
 .notam-b {
   background: linear-gradient(#5d6f89 70%, transparent);
+  outline: 2px solid #000001;
   color: #000001;
 }
 
@@ -132,7 +140,6 @@ li {
 .mondongo-b:hover,
 .coquicat-b:hover,
 .notam-b:hover {
-  width: 500px;
   box-shadow: 5px 5px 30px 20px #000;
   outline: 5px solid whitesmoke;
   margin: 0;
@@ -145,14 +152,7 @@ li {
 .mondongo-b:hover .mondongo,
 .coquicat-b:hover .coquicat,
 .notam-b:hover .notam {
-  width: 500px;
-  height: 500px;
   transition: all 0.4s ease;
-}
-.dani-b:hover {
-  transition: color 1s ease;
-  transition: all 0.4s ease;
-  color: white;
 }
 
 .pope,
@@ -170,7 +170,7 @@ li {
 /* Para pantallas más pequeñas */
 @media only screen and (max-width: 724px) {
   .tarjetas {
-    flex-direction: column;
+    justify-content: center;
     padding: 10px;
     overflow: hidden;
   }
@@ -218,9 +218,6 @@ li {
 .mondongo-b:hover li,
 .coquicat-b:hover li,
 .notam-b:hover li {
-  font-size: 15px;
-  line-height: 30px;
-  text
 }
 
   h2 {
