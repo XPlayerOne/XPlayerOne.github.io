@@ -23,6 +23,7 @@ h2 {
 li {
   font-size: 18px;
   line-height: 25px;
+  font-weight: 100;
   text-align: left;
   padding-left: 0;
   list-style-type: square;
@@ -30,14 +31,15 @@ li {
   transition-property: font-size, line-height;
 }
 
-.pope-b:hover li,
+/*.pope-b:hover li,
 .dani-b:hover li,
 .steven-b:hover li,
 .dymon-b:hover li,
 .mondongo-b:hover li,
 .coquicat-b:hover li,
+.green-b:hover li,
 .notam-b:hover li {
-}
+}*/
 
 .tarjetas {
   position: absolute;
@@ -54,6 +56,7 @@ li {
 .dymon-b,
 .mondongo-b,
 .coquicat-b,
+.green-b,
 .notam-b {
   position: relative;
   justify-content:space-around;
@@ -109,6 +112,12 @@ li {
   color: #e0beb5;
 }
 
+.green-b {
+  background: linear-gradient(#2b2446 70%, transparent);
+  outline: 2px solid #e0beb5;
+  color: #e0beb5;
+}
+
 .notam-b {
   background: linear-gradient(#5d6f89 70%, transparent);
   outline: 2px solid #000001;
@@ -121,6 +130,7 @@ li {
 .dymon-b::before,
 .mondongo-b::before,
 .coquicat-b::before,
+.green-b::before,
 .notam-b::before {
   content: "";
   position: absolute;
@@ -139,6 +149,7 @@ li {
 .dymon-b:hover,
 .mondongo-b:hover,
 .coquicat-b:hover,
+.green-b:hover,
 .notam-b:hover {
   box-shadow: 5px 5px 30px 20px #000;
   outline: 5px solid whitesmoke;
@@ -151,6 +162,7 @@ li {
 .dymon-b:hover .dymon,
 .mondongo-b:hover .mondongo,
 .coquicat-b:hover .coquicat,
+.green-b:hover .green
 .notam-b:hover .notam {
   transition: all 0.4s ease;
 }
@@ -181,6 +193,7 @@ li {
   .dymon-b,
   .mondongo-b,
   .coquicat-b,
+  .green-b,
   .notam-b {
     width: 300px;
     height: 500px;
@@ -192,6 +205,7 @@ li {
   .dymon-b:hover,
   .mondongo-b:hover,
   .coquicat-b:hover,
+  .green-b:hover,
   .notam-b:hover {
     width: 300px;
     height: 500px;
@@ -206,18 +220,11 @@ li {
   .dymon-b:hover .dymon,
   .mondongo-b:hover .mondongo,
   .coquicat-b:hover .coquicat,
+  .green-b:hover .green,
   .notam-b:hover .notam {
   width: 300px;
   height: 300px;
   transition: all 0.4s ease;
-}
-.pope-b:hover li,
-.dani-b:hover li,
-.steven-b:hover li,
-.dymon-b:hover li,
-.mondongo-b:hover li,
-.coquicat-b:hover li,
-.notam-b:hover li {
 }
 
   h2 {
